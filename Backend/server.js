@@ -37,8 +37,9 @@ console.log(("Debug: PORT from .env: " + process.env.PORT).debug);
 console.log(("Debug: MONGO_URI from .env: " + process.env.MONGO_URI).debug);
 
 app.listen(port, () => {
-    console.log(process.env.DEV.info)
+    console.log(`This app was created by ${process.env.DEV}`.info);
     console.log("Now you are cooking with gas!".success);
     console.log(`Server is up at http://localhost:${port}`.success);
     console.log(`Environment: ${process.env.NODE_ENV || 'development'}`.debug);
 });
+
